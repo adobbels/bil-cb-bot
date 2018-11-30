@@ -6,19 +6,21 @@ include Facebook::Messenger
 
 Bot.on :message do |message|
   message.typing_on
-  if message.text.include? "Bonjour"
-    message.reply(text: "Hello")
-  elsif message.text.include? "Bonne nuit"
-    message.reply(text: "A demain")
-  else
 
-    message.reply(
-    attachment: {
-    type: 'image',
-    payload: {
-      url: 'https://www.bil.com/PublishingImages/site-particuliers/MasterCard-Gold.jpg'
-    }
-  }
-)
-  end
+
+message.reply(
+      attachment: {
+        type: 'template',
+        payload: {
+          template_type: 'button',
+          text: 'What is the purpose of your query?',
+          buttons: [
+            { type: 'postback', title: 'Withdraw', payload: 'WITHDRAW' },
+            { type: 'postback', title: 'Payments', payload: 'PAYMENTS' },
+            { type: 'postback', title: 'Insurance', payload: 'INSURANCE' },
+          ]
+        }
+      }
+    )
+
 end
