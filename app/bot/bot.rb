@@ -12,5 +12,13 @@ Bot.on :message do |message|
     message.reply(text: "A demain")
   else
     message.reply(text: 'Pas compris')
+    message.reply(
+    attachment: {
+    type: 'image',
+    payload: {
+      url: 'https://www.bil.com/PublishingImages/site-particuliers/MasterCard-Gold.jpg'
+    }
+  }
+)
   end
 end
