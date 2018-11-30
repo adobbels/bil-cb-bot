@@ -1,7 +1,6 @@
 require 'facebook/messenger'
 
-# include Facebook::Messenger
-Facebook::Messenger::Bot
+include Facebook::Messenger
 
 Facebook::Messenger::Subscriptions.subscribe(access_token: ENV["ACCESS_TOKEN"])
 
