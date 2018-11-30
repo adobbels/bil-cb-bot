@@ -11,7 +11,7 @@ Bot.on :message do |message|
   elsif message.text.include? "Bonne nuit"
     message.reply(text: "A demain")
   else
-    message.reply(text: 'Pas compris')
+
     message.reply(
     attachment: {
     type: 'image',
