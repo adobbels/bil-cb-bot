@@ -42,7 +42,7 @@ attachment: {
       elements: [{
         title: "Mastercard Blue",
         subtitle:"got the right hat for everyone.",
-        image_url: 'assets/Mastercardblue.jpg',
+        image_url: 'https://www.mastercard.us/en-us/consumers/find-card-products/credit-cards/mastercard/_jcr_content/contentpar/herolight/image.adaptive.479.high.jpg/1487785073325.jpg',
         buttons: [
           {
             type: "postback",
