@@ -36,44 +36,68 @@ message.reply(
 
 message.reply(
 attachment: {
-                type: "template",
-                payload: {
-                  template_type: "generic",
-                  elements: [{
-                    title: "sample",
-                    subtitle:"got the right hat for everyone.",
-                    buttons: [
-                      {
-                        type: "postback",
-                        title: "MyTitle",
-                        payload: "Book Me a Venue",
-                      }
-                    ]
-                  },{
-                    title: "sample",
-                    subtitle:"got the right hat for everyone.",
-                    buttons: [
-                      {
-                        type: "postback",
-                        title: "MyTitle2",
-                        payload: "Book Me a Venue",
-                      }
-                    ]
-                  },{
-                    title: "sample",
-                    subtitle:"got the right hat for everyone.",
-                    buttons: [
-                      {
-                        type: "postback",
-                        title: "MyTitle2",
-                        payload: "Book Me a Venue",
-                      }
-                    ]
-                  }
-                ]
-                }
-              }
-
+    type: "template",
+    payload: {
+      template_type: "generic",
+      elements: [{
+        title: "Mastercard Blue",
+        subtitle:"got the right hat for everyone.",
+        image_url: 'assets/Mastercardblue.jpg',
+        buttons: [
+          {
+            type: "postback",
+            title: "MyTitle",
+            payload: "Book Me a Venue",
+          }
+        ]
+      },{
+        title: "Mastercard Gold",
+        subtitle:"got the right hat for everyone.",
+        image_url: 'https://www.visaeurope.com/media/images/visalogo73-189.png',
+        buttons: [
+          {
+            type: "Mastercard Platinium",
+            title: "MyTitle2",
+            payload: "Book Me a Venue",
+          }
+        ]
+      },{
+        title: "Mastercard Platinium International",
+        subtitle:"got the right hat for everyone.",
+        image_url: 'https://www.visaeurope.com/media/images/visalogo73-189.png',
+        buttons: [
+          {
+            type: "Mastercard Platinium",
+            title: "MyTitle2",
+            payload: "Book Me a Venue",
+          }
+        ]
+      },{
+        title: "Visa Classic",
+        subtitle:"got the right hat for everyone.",
+        image_url: 'https://www.visaeurope.com/media/images/visalogo73-189.png',
+        buttons: [
+          {
+            type: "Mastercard Platinium",
+            title: "MyTitle2",
+            payload: "Book Me a Venue",
+          }
+        ]
+      },{
+        title: "BIL Webcard",
+        subtitle:"got the right hat for everyone.",
+        image_url: 'https://www.visaeurope.com/media/images/visalogo73-189.png',
+        buttons: [
+          {
+            type: "postback",
+            title: "MyTitle2",
+            payload: "Book Me a Venue",
+          }
+        ]
+      }
+    ]
+    }
+  }
 )
 
 # message.reply(
