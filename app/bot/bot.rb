@@ -32,36 +32,36 @@ message.reply(
   }
 )
 
-message.reply(
-  attachment: {
-    type: 'template',
-    payload: {
-      template_type: 'generic',
-      elements: [
-          {
-          title: 'Is this the right picture?',
-          subtitle: 'Tap a button to answer.',
-          image_url: 'https://www.visaeurope.com/media/images/visalogo73-189.png',
-          buttons: [
-            { type: 'postback', title: 'Yes!', payload: 'yes' },
-            { type: 'postback',title: 'No!',payload: 'no' }
-            ],
-          }
-        ],
-        [
-          {
-          title: 'Is this the right picture?',
-          subtitle: 'Tap a button to answer.',
-          image_url: 'https://www.visaeurope.com/media/images/visalogo73-189.png',
-          buttons: [
-            { type: 'postback', title: 'Yes!', payload: 'yes' },
-            { type: 'postback',title: 'No!',payload: 'no' }
-            ],
-          }
-        ]
-    }
-  }
-)
+# message.reply(
+#   attachment: {
+#     type: 'template',
+#     payload: {
+#       template_type: 'generic',
+#       elements: [
+#           {
+#           title: 'Is this the right picture?',
+#           subtitle: 'Tap a button to answer.',
+#           image_url: 'https://www.visaeurope.com/media/images/visalogo73-189.png',
+#           buttons: [
+#             { type: 'postback', title: 'Yes!', payload: 'yes' },
+#             { type: 'postback',title: 'No!',payload: 'no' }
+#             ],
+#           }
+#         ],
+#         [
+#           {
+#           title: 'Is this the right picture?',
+#           subtitle: 'Tap a button to answer.',
+#           image_url: 'https://www.visaeurope.com/media/images/visalogo73-189.png',
+#           buttons: [
+#             { type: 'postback', title: 'Yes!', payload: 'yes' },
+#             { type: 'postback',title: 'No!',payload: 'no' }
+#             ],
+#           }
+#         ]
+#     }
+#   }
+# )
 
 # message.reply(
 # attachment: {
