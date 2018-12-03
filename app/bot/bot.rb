@@ -8,29 +8,7 @@ Bot.on :message do |message|
   message.mark_seen
   message.typing_on
 
-message.reply(
-  attachment: {
-    type: 'image',
-    payload: {
-      url: 'https://www.mastercard.us/en-us/consumers/find-card-products/credit-cards/mastercard/_jcr_content/contentpar/herolight/image.adaptive.479.high.jpg/1487785073325.jpg'
-    }
-  }
-)
 
-
-message.reply(
-  attachment: {
-    type: 'template',
-    payload: {
-      template_type: 'button',
-      text: 'Human, do you like me?',
-      buttons: [
-        { type: 'postback', title: 'Yes', payload: 'HARMLESS' },
-        { type: 'postback', title: 'No', payload: 'EXTERMINATE' }
-      ]
-    }
-  }
-)
 
 # message.reply(
 #   attachment: {
@@ -69,35 +47,35 @@ attachment: {
                 payload: {
                   template_type: "generic",
                   elements: [{
-                    title: "Mastercard Blue",
-                    subtitle:"Back to basics.",
+                    title: "Mastercard",
+                    subtitle:"Use your Mastercard credit card for everyday purchases",
+                    image_url: 'https://www.mastercard.us/en-us/consumers/find-card-products/credit-cards/mastercard/_jcr_content/contentpar/herolight_1/image.adaptive.479.high.jpg/1487872342914.jpg',
+                    buttons: [
+                      {
+                        type: "postback",
+                        title: "Choose this card",
+                        payload: "Book Me a Venue",
+                      }
+                    ]
+                  },{
+                    title: "World Mastercard",
+                    subtitle:"Giving you the flexibility to explore the places and pursuits that matter most to you",
                     image_url: 'https://www.mastercard.us/en-us/consumers/find-card-products/credit-cards/mastercard/_jcr_content/contentpar/herolight/image.adaptive.479.high.jpg/1487785073325.jpg',
                     buttons: [
                       {
                         type: "postback",
-                        title: "MyTitle",
+                        title: "Choose this card",
                         payload: "Book Me a Venue",
                       }
                     ]
                   },{
-                    title: "Mastercard Gold",
-                    subtitle:"Better than the Blue.",
-                    image_url: 'https://www.visaeurope.com/media/images/visalogo73-189.png',
+                    title: "World Elite Mastercard",
+                    subtitle:"Outstanding purchasing power and top-of-the-line features and benefits",
+                    image_url: 'https://www.mastercard.us/en-us/consumers/find-card-products/credit-cards/mastercard/_jcr_content/contentpar/herolight_0/image.adaptive.479.high.jpg/1487784767161.jpg',
                     buttons: [
                       {
                         type: "postback",
-                        title: "MyTitle",
-                        payload: "Book Me a Venue",
-                      }
-                    ]
-                  },{
-                    title: "Mastercard Platinium",
-                    subtitle:"For business men.",
-                    image_url: 'https://www.visaeurope.com/media/images/visalogo73-189.png',
-                    buttons: [
-                      {
-                        type: "postback",
-                        title: "MyTitle",
+                        title: "Choose this card",
                         payload: "Book Me a Venue",
                       }
                     ]
