@@ -12,7 +12,7 @@ message.reply(
   attachment: {
     type: 'image',
     payload: {
-      url: 'https://www.visaeurope.com/media/images/visalogo73-189.png'
+      url: 'https://www.mastercard.us/en-us/consumers/find-card-products/credit-cards/mastercard/_jcr_content/contentpar/herolight/image.adaptive.479.high.jpg/1487785073325.jpg'
     }
   }
 )
@@ -69,9 +69,9 @@ attachment: {
                 payload: {
                   template_type: "generic",
                   elements: [{
-                    title: "Mastercard",
+                    title: "Mastercard Blue",
                     subtitle:"Back to basics.",
-                    image_url: 'https://www.visaeurope.com/media/images/visalogo73-189.png',
+                    image_url: 'https://www.mastercard.us/en-us/consumers/find-card-products/credit-cards/mastercard/_jcr_content/contentpar/herolight/image.adaptive.479.high.jpg/1487785073325.jpg',
                     buttons: [
                       {
                         type: "postback",
