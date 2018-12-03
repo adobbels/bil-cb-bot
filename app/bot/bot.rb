@@ -32,102 +32,77 @@ message.reply(
   }
 )
 
-message.reply(
-  attachment: {
-    type: 'template',
-    payload: {
-      template_type: 'generic',
-      elements: [
-          {
-          title: 'Is this the right picture?',
-          subtitle: 'Tap a button to answer.',
-          image_url: 'https://www.visaeurope.com/media/images/visalogo73-189.png',
-          buttons: [
-            { type: 'postback', title: 'Yes!', payload: 'yes' },
-            { type: 'postback',title: 'No!',payload: 'no' }
-            ],
-          }
-        ],
-        [
-          {
-          title: 'Is this the right picture?',
-          subtitle: 'Tap a button to answer.',
-          image_url: 'https://www.visaeurope.com/media/images/visalogo73-189.png',
-          buttons: [
-            { type: 'postback', title: 'Yes!', payload: 'yes' },
-            { type: 'postback',title: 'No!',payload: 'no' }
-            ],
-          }
-        ]
-    }
-  }
-)
-
 # message.reply(
-# attachment: {
-#     type: "template",
+#   attachment: {
+#     type: 'template',
 #     payload: {
-#       template_type: "generic",
-#       elements: [{
-#         title: "Mastercard Blue",
-#         subtitle:"got the right hat for everyone.",
-#         image_url: 'https://www.mastercard.us/en-us/consumers/find-card-products/credit-cards/mastercard/_jcr_content/contentpar/herolight/image.adaptive.479.high.jpg/1487785073325.jpg',
-#         buttons: [
+#       template_type: 'generic',
+#       elements: [
 #           {
-#             type: "postback",
-#             title: "MyTitle",
-#             payload: "Book Me a Venue",
+#           title: 'Is this the right picture?',
+#           subtitle: 'Tap a button to answer.',
+#           image_url: 'https://www.visaeurope.com/media/images/visalogo73-189.png',
+#           buttons: [
+#             { type: 'postback', title: 'Yes!', payload: 'yes' },
+#             { type: 'postback',title: 'No!',payload: 'no' }
+#             ],
+#           }
+#         ],
+#         [
+#           {
+#           title: 'Is this the right picture?',
+#           subtitle: 'Tap a button to answer.',
+#           image_url: 'https://www.visaeurope.com/media/images/visalogo73-189.png',
+#           buttons: [
+#             { type: 'postback', title: 'Yes!', payload: 'yes' },
+#             { type: 'postback',title: 'No!',payload: 'no' }
+#             ],
 #           }
 #         ]
-#       },{
-#         title: "Mastercard Gold",
-#         subtitle:"got the right hat for everyone.",
-#         image_url: 'https://www.visaeurope.com/media/images/visalogo73-189.png',
-#         buttons: [
-#           {
-#             type: "Mastercard Platinium",
-#             title: "MyTitle2",
-#             payload: "Book Me a Venue",
-#           }
-#         ]
-#       },{
-#         title: "Mastercard Platinium International",
-#         subtitle:"got the right hat for everyone.",
-#         image_url: 'https://www.visaeurope.com/media/images/visalogo73-189.png',
-#         buttons: [
-#           {
-#             type: "Mastercard Platinium",
-#             title: "MyTitle2",
-#             payload: "Book Me a Venue",
-#           }
-#         ]
-#       },{
-#         title: "Visa Classic",
-#         subtitle:"got the right hat for everyone.",
-#         image_url: 'https://www.visaeurope.com/media/images/visalogo73-189.png',
-#         buttons: [
-#           {
-#             type: "Mastercard Platinium",
-#             title: "MyTitle2",
-#             payload: "Book Me a Venue",
-#           }
-#         ]
-#       },{
-#         title: "BIL Webcard",
-#         subtitle:"got the right hat for everyone.",
-#         image_url: 'https://www.visaeurope.com/media/images/visalogo73-189.png',
-#         buttons: [
-#           {
-#             type: "postback",
-#             title: "MyTitle2",
-#             payload: "Book Me a Venue",
-#           }
-#         ]
-#       }
-#     ]
 #     }
 #   }
 # )
+
+message.reply(
+attachment: {
+                type: "template",
+                payload: {
+                  template_type: "generic",
+                  elements: [{
+                    title: "sample",
+                    subtitle:"We'\''ve got the right hat for everyone.",
+                    buttons: [
+                      {
+                        type: "postback",
+                        title: data[i],
+                        payload: "Book Me a Venue",
+                      }
+                    ]
+                  },{
+                    title: "sample",
+                    subtitle:"We'\''ve got the right hat for everyone.",
+                    buttons: [
+                      {
+                        type: "postback",
+                        title: data[i],
+                        payload: "Book Me a Venue",
+                      }
+                    ]
+                  },{
+                    title: "sample",
+                    subtitle:"We'\''ve got the right hat for everyone.",
+                    buttons: [
+                      {
+                        type: "postback",
+                        title: data[i],
+                        payload: "Book Me a Venue",
+                      }
+                    ]
+                  }
+                ]
+                }
+              }
+)
 
 # message.reply(
 #   attachment: {
