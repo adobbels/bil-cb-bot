@@ -130,27 +130,27 @@ Bot.on :postback do |postback|
 end
 
 
-Bot.on :postback do |postback|
+# Bot.on :postback do |postback|
 
 
-  postback.reply(
-    text: "OK - let me check"
-  )
+#   postback.reply(
+#     text: "OK - let me check"
+#   )
 
-  postback.reply(
-        attachment: {
-        type: 'template',
-        payload: {
-          template_type: 'button',
-          text: 'Did human like it?',
-          buttons: [
-            { type: 'postback', title: 'Yes', payload: 'HUMAN_LIKED' },
-            { type: 'postback', title: 'No', payload: 'HUMAN_DISLIKED' }
-          ]
-        }
-      }
-  )
+#   postback.reply(
+#         attachment: {
+#         type: 'template',
+#         payload: {
+#           template_type: 'button',
+#           text: 'Did human like it?',
+#           buttons: [
+#             { type: 'postback', title: 'Yes', payload: 'HUMAN_LIKED' },
+#             { type: 'postback', title: 'No', payload: 'HUMAN_DISLIKED' }
+#           ]
+#         }
+#       }
+#   )
 
-end
+# end
 
 
