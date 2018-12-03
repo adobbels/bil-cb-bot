@@ -67,9 +67,7 @@ Bot.on :postback do |postback|
   end
   postback.reply(
     text: text
-
-    postback.reply(
-      attachment: {
+    attachment: {
         type: 'template',
         payload: {
           template_type: 'button',
@@ -80,9 +78,6 @@ Bot.on :postback do |postback|
           ]
         }
       }
-    )
-
-
   )
 end
 
