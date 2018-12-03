@@ -17,6 +17,21 @@ message.reply(
   }
 )
 
+
+message.reply(
+  attachment: {
+    type: 'template',
+    payload: {
+      template_type: 'button',
+      text: 'Human, do you like me?',
+      buttons: [
+        { type: 'postback', title: 'Yes', payload: 'HARMLESS' },
+        { type: 'postback', title: 'No', payload: 'EXTERMINATE' }
+      ]
+    }
+  }
+)
+
 # message.reply(
 #       attachment: {
 #         type: 'template',
