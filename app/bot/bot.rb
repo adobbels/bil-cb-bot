@@ -8,14 +8,14 @@ Bot.on :message do |message|
   message.mark_seen
   message.typing_on
 
-# message.reply(
-#   attachment: {
-#     type: 'image',
-#     payload: {
-#       url: 'https://www.visaeurope.com/media/images/visalogo73-189.png'
-#     }
-#   }
-# )
+message.reply(
+  attachment: {
+    type: 'image',
+    payload: {
+      url: 'https://www.visaeurope.com/media/images/visalogo73-189.png'
+    }
+  }
+)
 
 
 message.reply(
@@ -69,8 +69,9 @@ attachment: {
                 payload: {
                   template_type: "generic",
                   elements: [{
-                    title: "sample",
-                    subtitle:"We'\''ve got the right hat for everyone.",
+                    title: "Mastercard",
+                    subtitle:"Back to basics.",
+                    image_url: 'https://www.visaeurope.com/media/images/visalogo73-189.png',
                     buttons: [
                       {
                         type: "postback",
@@ -79,8 +80,9 @@ attachment: {
                       }
                     ]
                   },{
-                    title: "sample",
-                    subtitle:"We'\''ve got the right hat for everyone.",
+                    title: "Mastercard Gold",
+                    subtitle:"Better than the Blue.",
+                    image_url: 'https://www.visaeurope.com/media/images/visalogo73-189.png',
                     buttons: [
                       {
                         type: "postback",
@@ -89,8 +91,9 @@ attachment: {
                       }
                     ]
                   },{
-                    title: "sample",
-                    subtitle:"We'\''ve got the right hat for everyone.",
+                    title: "Mastercard Platinium",
+                    subtitle:"For business men.",
+                    image_url: 'https://www.visaeurope.com/media/images/visalogo73-189.png',
                     buttons: [
                       {
                         type: "postback",
