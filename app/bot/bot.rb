@@ -32,6 +32,50 @@ message.reply(
   }
 )
 
+
+
+message.reply(
+attachment: {
+                type: "template",
+                payload: {
+                  template_type: "generic",
+                  elements: [{
+                    title: "sample",
+                    subtitle:"got the right hat for everyone.",
+                    buttons: [
+                      {
+                        type: "postback",
+                        title: "MyTitle",
+                        payload: "Book Me a Venue",
+                      }
+                    ]
+                  },{
+                    title: "sample",
+                    subtitle:"got the right hat for everyone.",
+                    buttons: [
+                      {
+                        type: "postback",
+                        title: "MyTitle2",
+                        payload: "Book Me a Venue",
+                      }
+                    ]
+                  },{
+                    title: "sample",
+                    subtitle:"got the right hat for everyone.",
+                    buttons: [
+                      {
+                        type: "postback",
+                        title: "MyTitle2",
+                        payload: "Book Me a Venue",
+                      }
+                    ]
+                  }
+                ]
+                }
+              }
+
+)
+
 # message.reply(
 #   attachment: {
 #     type: 'template',
