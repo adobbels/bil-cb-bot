@@ -74,7 +74,7 @@ attachment: {
                     buttons: [
                       {
                         type: "postback",
-                        title: data[i],
+                        title: "MyTitle",
                         payload: "Book Me a Venue",
                       }
                     ]
@@ -84,7 +84,7 @@ attachment: {
                     buttons: [
                       {
                         type: "postback",
-                        title: data[i],
+                        title: "MyTitle",
                         payload: "Book Me a Venue",
                       }
                     ]
@@ -94,7 +94,7 @@ attachment: {
                     buttons: [
                       {
                         type: "postback",
-                        title: data[i],
+                        title: "MyTitle",
                         payload: "Book Me a Venue",
                       }
                     ]
