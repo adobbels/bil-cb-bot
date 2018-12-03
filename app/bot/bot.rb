@@ -80,7 +80,7 @@ Bot.on :postback do |postback|
                   elements: [{
                     title: "Traveling",
                     subtitle:"Use your Mastercard credit card for everyday purchases",
-                    image_url: 'https://images.ctfassets.net/q33z48p65a6w/cpATCb645qYye8gIQK2ay/94b41190786f34f74f5fe4712fb1494f/Vacation_33x.png?fit=thumb&w=1280&q=60',
+                    image_url: 'https://cdn.dribbble.com/users/1303437/screenshots/3478867/holiday_800x600.gif',
                     buttons: [
                       {
                         type: "postback",
