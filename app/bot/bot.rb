@@ -4,6 +4,83 @@ include Facebook::Messenger
 
 # Facebook::Messenger::Subscriptions.subscribe(access_token: ENV["ACCESS_TOKEN"])
 
+
+Bot.on :message do |message|
+  message.mark_seen
+  message.typing_on
+
+message.reply(text: 'hi! Please choose your credit card.')
+
+message.reply(
+attachment: {
+      type: "template",
+      payload: {
+        template_type: "list",
+        top_element_style: "compact",
+        elements: [
+          {
+            title: "Classic T-Shirt Collection",
+            subtitle: "See all our colors",
+            image_url: "https://www.mastercard.us/en-us/consumers/find-card-products/credit-cards/mastercard/_jcr_content/contentpar/herolight_1/image.adaptive.479.high.jpg/1487872342914.jpg",
+            buttons: [
+              {
+                title: "View",
+                type: "web_url",
+                url: "https://peterssendreceiveapp.ngrok.io/collection",
+                messenger_extensions: true,
+                webview_height_ratio: "tall",
+                fallback_url: "https://peterssendreceiveapp.ngrok.io/"
+              }
+            ]
+          },
+          {
+            title: "Classic White T-Shirt",
+            subtitle: "See all our colors",
+            default_action: {
+              type: "web_url",
+              url: "https://peterssendreceiveapp.ngrok.io/view?item=100",
+              messenger_extensions: false,
+              webview_height_ratio: "tall"
+            }
+          },
+          {
+            title: "Classic Blue T-Shirt",
+            image_url: "https://www.mastercard.us/en-us/consumers/find-card-products/credit-cards/mastercard/_jcr_content/contentpar/herolight_1/image.adaptive.479.high.jpg/1487872342914.jpg",
+            subtitle: "100% Cotton, 200% Comfortable",
+            default_action: {
+              type: "web_url",
+              url: "https://peterssendreceiveapp.ngrok.io/view?item=101",
+              messenger_extensions: true,
+              webview_height_ratio: "tall",
+              fallback_url: "https://peterssendreceiveapp.ngrok.io/"
+            },
+            buttons: [
+              {
+                title: "Shop Now",
+                type: "web_url",
+                url: "https://peterssendreceiveapp.ngrok.io/shop?item=101",
+                messenger_extensions: true,
+                webview_height_ratio: "tall",
+                fallback_url: "https://peterssendreceiveapp.ngrok.io/"
+              }
+            ]
+          }
+        ],
+         buttons: [
+          {
+            title: "View More",
+            type: "postback",
+            payload: "payload"
+          }
+        ]
+      }
+    }
+  }
+)
+end
+
+
+
 Bot.on :message do |message|
   message.mark_seen
   message.typing_on
@@ -53,9 +130,7 @@ attachment: {
                 }
               }
 )
-
 end
-
 
 Bot.on :postback do |postback|
   case postback.payload
@@ -71,73 +146,5 @@ Bot.on :postback do |postback|
   )
 end
 
-# Bot.on :message do |message|
-#   puts "Received '#{message.inspect}' from #{message.sender}"
 
-#   case message.text
-#   when /hello/i
-#     message.reply(
-#       text: 'Hello, human!',
-#       quick_replies: [
-#         {
-#           content_type: 'text',
-#           title: 'Hello, bot!',
-#           payload: 'HELLO_BOT'
-#         }
-#       ]
-#     )
-#   when /something humans like/i
-#     message.reply(
-#       text: 'I found something humans seem to like:'
-#     )
-
-#     message.reply(
-#       attachment: {
-#         type: 'image',
-#         payload: {
-#           url: 'https://i.imgur.com/iMKrDQc.gif'
-#         }
-#       }
-#     )
-
-#     message.reply(
-#       attachment: {
-#         type: 'template',
-#         payload: {
-#           template_type: 'button',
-#           text: 'Did human like it?',
-#           buttons: [
-#             { type: 'postback', title: 'Yes', payload: 'HUMAN_LIKED' },
-#             { type: 'postback', title: 'No', payload: 'HUMAN_DISLIKED' }
-#           ]
-#         }
-#       }
-#     )
-#   else
-#     message.reply(
-#       text: 'You are now marked for extermination.'
-#     )
-
-#     message.reply(
-#       text: 'Have a nice day.'
-#     )
-#   end
-# end
-
-# Bot.on :postback do |postback|
-#   case postback.payload
-#   when 'HUMAN_LIKED'
-#     text = 'That makes bot happy!'
-#   when 'HUMAN_DISLIKED'
-#     text = 'Oh.'
-#   end
-
-#   postback.reply(
-#     text: text
-#   )
-# end
-
-# Bot.on :delivery do |delivery|
-#   puts "Delivered message(s) #{delivery.ids}"
-# end
 
