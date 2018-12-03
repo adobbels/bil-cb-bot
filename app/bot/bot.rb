@@ -69,7 +69,7 @@ Bot.on :postback do |postback|
     text: text
   )
   postback.reply(
-    text: "What is your query about"
+    text: "What is your query about?"
   )
 
   postback.reply(
@@ -79,7 +79,7 @@ Bot.on :postback do |postback|
                   template_type: "generic",
                   elements: [{
                     title: "Traveling and FX ☀️",
-                    subtitle:"Travelling abroad has never so easy",
+                    subtitle:"Lucky you! Enjoy the sun and your holidays!",
                     image_url: 'https://cdn.dribbble.com/users/1303437/screenshots/3478867/holiday_800x600.gif',
                     buttons: [
                       {
@@ -90,7 +90,7 @@ Bot.on :postback do |postback|
                     ]
                   },{
                     title: "Payment issue",
-                    subtitle:"Keep calm and read this section 🧘",
+                    subtitle:"No worries! Keep calm and read this section 🧘",
                     image_url: 'https://cdn.dribbble.com/users/1728608/screenshots/4632767/vault.gif',
                     buttons: [
                       {
@@ -118,7 +118,7 @@ Bot.on :postback do |postback|
                       {
                         type: "postback",
                         title: "Read more",
-                        payload: "Fully covered wherever you go 🌍",
+                        payload: "Fully covered, wherever you go 🌍",
                       }
                     ]
                   }
