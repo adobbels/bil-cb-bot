@@ -8,38 +8,7 @@ Bot.on :message do |message|
   message.mark_seen
   message.typing_on
 
-
-
-# message.reply(
-#   attachment: {
-#     type: 'template',
-#     payload: {
-#       template_type: 'generic',
-#       elements: [
-#           {
-#           title: 'Is this the right picture?',
-#           subtitle: 'Tap a button to answer.',
-#           image_url: 'https://www.visaeurope.com/media/images/visalogo73-189.png',
-#           buttons: [
-#             { type: 'postback', title: 'Yes!', payload: 'yes' },
-#             { type: 'postback',title: 'No!',payload: 'no' }
-#             ],
-#           }
-#         ],
-#         [
-#           {
-#           title: 'Is this the right picture?',
-#           subtitle: 'Tap a button to answer.',
-#           image_url: 'https://www.visaeurope.com/media/images/visalogo73-189.png',
-#           buttons: [
-#             { type: 'postback', title: 'Yes!', payload: 'yes' },
-#             { type: 'postback',title: 'No!',payload: 'no' }
-#             ],
-#           }
-#         ]
-#     }
-#   }
-# )
+message.reply(text: 'hi! Please choose your credit card.')
 
 message.reply(
 attachment: {
@@ -59,7 +28,7 @@ attachment: {
                     ]
                   },{
                     title: "World Mastercard",
-                    subtitle:"Giving you the flexibility to explore the places and pursuits that matter most to you",
+                    subtitle:"Give you the flexibility to explore all the places that matter to you",
                     image_url: 'https://www.mastercard.us/en-us/consumers/find-card-products/credit-cards/mastercard/_jcr_content/contentpar/herolight/image.adaptive.479.high.jpg/1487785073325.jpg',
                     buttons: [
                       {
@@ -85,59 +54,17 @@ attachment: {
               }
 )
 
-# message.reply(
-#   attachment: {
-#     type: 'template',
-#     payload: {
-#       template_type: 'generic',
-#       elements: [{
-#         title: 'Is this the right picture?',
-#         subtitle: 'Tap a button to answer.',
-#         image_url: 'https://www.visaeurope.com/media/images/visalogo73-189.png',
-#         buttons: [
-#           { type: 'postback', title: 'Yes!', payload: 'yes' },
-#           { type: 'postback',title: 'No!',payload: 'no' }
-#         ],
-#       }]
-#     }
-#   }
-# )
 
+Bot.on :postback do |postback|
+  postback.sender    # => { 'id' => '1008372609250235' }
+  postback.recipient # => { 'id' => '2015573629214912' }
+  postback.sent_at   # => 2016-04-22 21:30:36 +0200
+  postback.payload   # => 'EXTERMINATE'
 
-
-# message.reply(
-#       attachment: {
-#         type: 'template',
-#         payload: {
-#           template_type: 'button',
-#           text: 'What is the purpose of your query?',
-#           buttons: [
-#             { type: 'postback', title: 'Withdraw', payload: 'WITHDRAW' },
-#             { type: 'postback', title: 'Payments', payload: 'PAYMENTS' },
-#             { type: 'postback', title: 'Insurance', payload: 'INSURANCE' },
-#           ]
-#         }
-#       }
-#     )
-
-
-#       attachment: {
-#         type: 'template',
-#         payload: {
-#           template_type: 'generic',
-#           elements: [{
-#             title: 'Is this the right picture?',
-#             subtitle: 'Tap a button to answer.',
-#             image_url: 'https://www.visaeurope.com/media/images/visalogo73-189.png',
-#             buttons: [
-#               { type: 'postback', title: 'Yes!', payload: 'yes' },
-#               { type: 'postback',title: 'No!',payload: 'no' },
-#             ],
-#           }]
-#         }
-#       }
-
-
+  if postback.payload == 'Book Me a Venue'
+    puts "Nice choice #{postback.recipient}!"
+  end
+end
 
 end
 
