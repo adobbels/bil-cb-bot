@@ -13,6 +13,7 @@ message.reply(
       attachment: {
         type: 'template',
         payload: {
+          template_type: 'generic',
           elements: [{
             title: 'Is this the right picture?',
             subtitle: 'Tap a button to answer.',
