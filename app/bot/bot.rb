@@ -88,7 +88,7 @@ Bot.on :postback do |postback|
                       {
                         type: "postback",
                         title: "Read more",
-                        payload: "Traveling and FX ☀️",
+                        payload: "Traveling",
                       }
                     ]
                   },{
@@ -99,7 +99,7 @@ Bot.on :postback do |postback|
                       {
                         type: "postback",
                         title: "Read more",
-                        payload: "Keep calm and read this section 🧘",
+                        payload: "Calm",
                       }
                     ]
                   },{
@@ -110,7 +110,7 @@ Bot.on :postback do |postback|
                       {
                         type: "postback",
                         title: "Read more",
-                        payload: "Limits Management",
+                        payload: "Limits",
                       }
                     ]
                   },{
@@ -121,7 +121,7 @@ Bot.on :postback do |postback|
                       {
                         type: "postback",
                         title: "Read more",
-                        payload: "Fully covered, wherever you go 🌍",
+                        payload: "Covered",
                       }
                     ]
                   }
@@ -135,25 +135,35 @@ Bot.on :postback do |postback|
   postback.reply(
     text: "ok, let's have a look at your query"
   )
+  case postback.payload
+  when 'Traveling'
+    text = 'Traveling'
+  when 'Calm'
+    text = 'Calm'
+  when 'Limits'
+    text = 'Limits'
+  when 'Covered'
+    text = 'Covered'
+  end
   # postback.reply(
   #   text: postback.payload
   # )
-  postback.reply(
-    attachment: {
-      type: 'template',
-      payload: {
-        template_type: 'button',
-        text: 'What is your topic?',
-        buttons: [
-          { type: 'postback', title: 'Description of hazards', payload: 'risks' },
-          { type: 'postback', title: 'Loss of life accident indemnity', payload: 'life' }
-          { type: 'postback', title: 'Specific accident indemnity', payload: 'specific' }
-          { type: 'postback', title: 'General exclusion', payload: 'exclusion' }
-          { type: 'postback', title: 'Payment of benefits and beneficary', payload: 'beneficiary' }
-        ]
-      }
-    }
-  )
+  # postback.reply(
+  #   attachment: {
+  #     type: 'template',
+  #     payload: {
+  #       template_type: 'button',
+  #       text: 'What is your topic?',
+  #       buttons: [
+  #         { type: 'postback', title: 'Description of hazards', payload: 'risks' },
+  #         { type: 'postback', title: 'Loss of life accident indemnity', payload: 'life' }
+  #         { type: 'postback', title: 'Specific accident indemnity', payload: 'specific' }
+  #         { type: 'postback', title: 'General exclusion', payload: 'exclusion' }
+  #         { type: 'postback', title: 'Payment of benefits and beneficary', payload: 'beneficiary' }
+  #       ]
+  #     }
+  #   }
+  # )
 end
 # Fin double boucle
 
