@@ -139,6 +139,8 @@ Bot.on :postback do |postback|
     text = '2'
   when 'Fully covered, wherever you go 🌍'
     text = '3'
+  else
+    text = '4'
   end
   postback.reply(
     text: text
