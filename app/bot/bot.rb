@@ -131,25 +131,25 @@ Bot.on :postback do |postback|
   )
 
 # Double boucle
-Bot.on :postback do |postback|
-  case postback.payload
-  when 'Traveling'
-    text = 'Traveling'
-  when 'Calm'
-    text = 'Calm'
-  when 'Limits'
-    text = 'Limits'
-  when 'Covered'
-    text = 'Covered'
-  else
-    text = postback.payload
-  end
-  postback.reply(
-    text: "ok, let's have a look at your query"
-  )
-    postback.reply(
-    text: text
-  )
+# Bot.on :postback do |postback|
+#   case postback.payload
+#   when 'Traveling'
+#     text = 'Traveling'
+#   when 'Calm'
+#     text = 'Calm'
+#   when 'Limits'
+#     text = 'Limits'
+#   when 'Covered'
+#     text = 'Covered'
+#   else
+#     text = postback.payload
+#   end
+#   postback.reply(
+#     text: "ok, let's have a look at your query"
+#   )
+#     postback.reply(
+#     text: text
+#   )
   # postback.reply(
   #   text: postback.payload
   # )
@@ -169,9 +169,16 @@ Bot.on :postback do |postback|
   #     }
   #   }
   # )
-end
+#end
 # Fin double boucle
 
 end
 
+Bot.on :message do |message|
 
+
+  message.reply(text: 'hi! Please choose your credit card.')
+
+
+
+end
