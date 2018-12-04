@@ -134,7 +134,7 @@ Bot.on :postback do |postback|
 # Double boucle
   Bot.on :postback do |postback|
     postback.reply(
-      text: "ok, let's have a look at your query"
+      text: "Please check this https://www.bil.com/Documents/brochures/mc-gold-assurance-accident-voyage-en.pdf"
     )
     # postback.reply(
     #   text: text
