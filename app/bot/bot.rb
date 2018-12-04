@@ -156,11 +156,6 @@ Bot.on :postback do |postback|
         }
       }
     )
-    Bot.on :postback do |postback|
-      postback.reply(
-        text: postback.payload
-      )
-    end
 
   end
 # Fin double boucle
