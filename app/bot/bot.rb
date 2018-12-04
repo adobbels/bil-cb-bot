@@ -132,42 +132,33 @@ Bot.on :postback do |postback|
 
 
 # Double boucle
-Bot.on :postback do |postback|
-  # case postback.payload
-  #   when 'Traveling'
-  #     text = 'Traveling'
-  #   when 'Calm'
-  #     text = 'Calm'
-  #   when 'Limits'
-  #     text = 'Limits'
-  #   when 'Covered'
-  #     text = 'Covered'
-  #   else
-  #     text = postback.payload
-  # end
-  postback.reply(
-    text: "ok, let's have a look at your query"
-  )
-  # postback.reply(
-  #   text: text
-  # )
-  # postback.reply(
-  #   text: postback.payload
-  # )
-  postback.reply(
-    attachment: {
-      type: 'template',
-      payload: {
-        template_type: 'button',
-        text: 'What is the topic?',
-        buttons: [
-          { type: 'postback', title: 'Beneficiary', payload: 'Beneficiary' },
-          { type: 'postback', title: 'Accident', payload: 'Accident' }
-        ]
+  Bot.on :postback do |postback|
+    postback.reply(
+      text: "ok, let's have a look at your query"
+    )
+    # postback.reply(
+    #   text: text
+    # )
+    # postback.reply(
+    #   text: postback.payload
+    # )
+    postback.reply(
+      attachment: {
+        type: 'template',
+        payload: {
+          template_type: 'button',
+          text: 'What is the topic?',
+          buttons: [
+            { type: 'postback', title: 'Beneficiary', payload: 'Beneficiary' },
+            { type: 'postback', title: 'Accident', payload: 'Accident' }
+          ]
+        }
       }
-    }
+    )
+    postback.reply(
+    text: "Here is a link for you : https://www.bil.com/en/individuals/products-and-services/managing-day-to-day-finances/Pages/credit-cards.aspx"
   )
-end
+  end
 # Fin double boucle
 end
 
