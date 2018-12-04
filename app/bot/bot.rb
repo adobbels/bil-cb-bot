@@ -132,43 +132,40 @@ Bot.on :postback do |postback|
 
 # Double boucle
 Bot.on :postback do |postback|
-  case postback.payload
-  when 'Traveling'
-    text = 'Traveling'
-  when 'Calm'
-    text = 'Calm'
-  when 'Limits'
-    text = 'Limits'
-  when 'Covered'
-    text = 'Covered'
-  else
-    text = postback.payload
-  end
+  # case postback.payload
+  #   when 'Traveling'
+  #     text = 'Traveling'
+  #   when 'Calm'
+  #     text = 'Calm'
+  #   when 'Limits'
+  #     text = 'Limits'
+  #   when 'Covered'
+  #     text = 'Covered'
+  #   else
+  #     text = postback.payload
+  # end
   postback.reply(
     text: "ok, let's have a look at your query"
   )
-    postback.reply(
-    text: text
+  # postback.reply(
+  #   text: text
+  # )
+  postback.reply(
+    text: postback.payload
   )
-  # postback.reply(
-  #   text: postback.payload
-  # )
-  # postback.reply(
-  #   attachment: {
-  #     type: 'template',
-  #     payload: {
-  #       template_type: 'button',
-  #       text: 'What is your topic?',
-  #       buttons: [
-  #         { type: 'postback', title: 'Description of hazards', payload: 'risks' },
-  #         { type: 'postback', title: 'Loss of life accident indemnity', payload: 'life' }
-  #         { type: 'postback', title: 'Specific accident indemnity', payload: 'specific' }
-  #         { type: 'postback', title: 'General exclusion', payload: 'exclusion' }
-  #         { type: 'postback', title: 'Payment of benefits and beneficary', payload: 'beneficiary' }
-  #       ]
-  #     }
-  #   }
-  # )
+  postback.reply(
+    attachment: {
+      type: 'template',
+      payload: {
+        template_type: 'button',
+        text: 'What is the topic?',
+        buttons: [
+          { type: 'postback', title: 'Beneficiary', payload: 'HARMLESS' },
+          { type: 'postback', title: 'Accident', payload: 'EXTERMINATE' }
+        ]
+      }
+    }
+  )
 end
 # Fin double boucle
 
