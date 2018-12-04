@@ -131,13 +131,13 @@ Bot.on :postback do |postback|
   )
 
 # Double boucle
-# Bot.on :postback do |postback|
-#   postback.reply(
-#     text: "ok, let's have a look at your query"
-#   )
-#   postback.reply(
-#     text: postback.payload
-#   )
+Bot.on :postback do |postback|
+  postback.reply(
+    text: "ok, let's have a look at your query"
+  )
+  postback.reply(
+    text: postback.payload
+  )
   # postback.reply(
   #   attachment: {
   #     type: 'template',
@@ -154,7 +154,7 @@ Bot.on :postback do |postback|
   #     }
   #   }
   # )
-#end
+end
 # Fin double boucle
 
 end
