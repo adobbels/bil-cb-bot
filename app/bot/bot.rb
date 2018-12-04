@@ -128,9 +128,6 @@ Bot.on :postback do |postback|
               }
   )
 
-end
-
-
 Bot.on :postback do |postback|
   case postback.payload
   when 'Traveling and FX ☀️'
@@ -149,3 +146,8 @@ Bot.on :postback do |postback|
     text: "ok it works"
   )
 end
+
+
+end
+
+
