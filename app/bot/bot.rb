@@ -151,19 +151,22 @@ Bot.on :postback do |postback|
           buttons: [
             { type: 'postback', title: 'Beneficiary', payload: 'Beneficiary' },
             { type: 'postback', title: 'Accident', payload: 'Accident' }
+            { type: 'postback', title: 'Exclusion', payload: 'Exclusion' }
           ]
         }
       }
     )
-  case postback.payload
-  when 'Beneficiary'
-    text = 'Here is a link for you : https://www.bil.com/en/individuals/products-and-services/managing-day-to-day-finances/Pages/credit-cards.aspx"'
-  when 'Accident'
-    text = 'Here is a link for you : https://www.bil.com/en/individuals/products-and-services/managing-day-to-day-finances/Pages/credit-cards.aspx"'
-  end
+    case postback.payload
+    when 'Beneficiary'
     postback.reply(
-    text: text
-  )
+      text: 'Here is a link for you : https://www.bil.com/en/individuals/products-and-services/managing-day-to-day-finances/Pages/credit-cards.aspx"'
+    )
+    when 'Accident'
+    postback.reply(
+      text: 'Here is a link for you : https://www.bil.com/en/individuals/products-and-services/managing-day-to-day-finances/Pages/credit-cards.aspx"'
+    )
+    end
+
   end
 # Fin double boucle
 end
