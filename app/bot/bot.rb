@@ -10,7 +10,7 @@ Bot.on :message do |message|
   message.mark_seen
   message.typing_on
 
-  message.reply(text: 'hi! Please choose your credit card.')
+  puts message.reply(text: 'hi! Please choose your credit card.')
 
   message.reply(
   attachment: {
@@ -177,7 +177,7 @@ end
 Bot.on :message do |message|
 
 
-  message.reply(text: 'hi! Please choose your credit card.')
+  message.reply(text: 'hi! Please choose your credit card 222.')
 
 
 
