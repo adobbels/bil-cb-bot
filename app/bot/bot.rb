@@ -4,16 +4,6 @@ include Facebook::Messenger
 
 # Facebook::Messenger::Subscriptions.subscribe(access_token: ENV["ACCESS_TOKEN"])
 
- message:{
-    text: "Here is a quick reply!",
-    quick_replies:[
-      {
-        content_type:"text",
-        title:"Search",
-        payload:"TEST",
-      }
-    ]
-  }
 
 
 Bot.on :message do |message|
