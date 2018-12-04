@@ -130,6 +130,8 @@ Bot.on :postback do |postback|
               }
   )
 
+
+end
 # Double boucle
 Bot.on :postback do |postback|
   # case postback.payload
@@ -168,5 +170,3 @@ Bot.on :postback do |postback|
   )
 end
 # Fin double boucle
-
-end
