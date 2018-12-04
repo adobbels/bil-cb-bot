@@ -135,25 +135,25 @@ Bot.on :postback do |postback|
   postback.reply(
     text: "ok, let's have a look at your query"
   )
-  postback.reply(
-    text: postback.payload
-  )
   # postback.reply(
-  #   attachment: {
-  #     type: 'template',
-  #     payload: {
-  #       template_type: 'button',
-  #       text: 'What is your topic?',
-  #       buttons: [
-  #         { type: 'postback', title: 'Description of hazards', payload: 'risks' },
-  #         { type: 'postback', title: 'Loss of life accident indemnity', payload: 'life' }
-  #         { type: 'postback', title: 'Specific accident indemnity', payload: 'specific' }
-  #         { type: 'postback', title: 'General exclusion', payload: 'exclusion' }
-  #         { type: 'postback', title: 'Payment of benefits and beneficary', payload: 'beneficiary' }
-  #       ]
-  #     }
-  #   }
+  #   text: postback.payload
   # )
+  postback.reply(
+    attachment: {
+      type: 'template',
+      payload: {
+        template_type: 'button',
+        text: 'What is your topic?',
+        buttons: [
+          { type: 'postback', title: 'Description of hazards', payload: 'risks' },
+          { type: 'postback', title: 'Loss of life accident indemnity', payload: 'life' }
+          { type: 'postback', title: 'Specific accident indemnity', payload: 'specific' }
+          { type: 'postback', title: 'General exclusion', payload: 'exclusion' }
+          { type: 'postback', title: 'Payment of benefits and beneficary', payload: 'beneficiary' }
+        ]
+      }
+    }
+  )
 end
 # Fin double boucle
 
