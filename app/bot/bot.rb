@@ -131,7 +131,19 @@ Bot.on :postback do |postback|
 end
 
 
-Bot.on :message do |message|
-  message.reply(text: 'it works')
+Bot.on :postback do |postback|
+  case postback.payload
+  when 'Traveling and FX ☀️'
+    text = '1!'
+  when 'Keep calm and read this section 🧘'
+    text = '2'
+  when 'Fully covered, wherever you go 🌍'
+    text = '3'
+  end
+  postback.reply(
+    text: text
+  )
+  postback.reply(
+    text: "ok it works"
+  )
 end
-
