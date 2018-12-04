@@ -155,8 +155,14 @@ Bot.on :postback do |postback|
         }
       }
     )
+  case postback.payload
+  when 'Beneficiary'
+    text = 'Here is a link for you : https://www.bil.com/en/individuals/products-and-services/managing-day-to-day-finances/Pages/credit-cards.aspx"'
+  when 'Accident'
+    text = 'Here is a link for you : https://www.bil.com/en/individuals/products-and-services/managing-day-to-day-finances/Pages/credit-cards.aspx"'
+  end
     postback.reply(
-    text: "Here is a link for you : https://www.bil.com/en/individuals/products-and-services/managing-day-to-day-finances/Pages/credit-cards.aspx"
+    text: text
   )
   end
 # Fin double boucle
