@@ -135,6 +135,9 @@ Bot.on :postback do |postback|
   postback.reply(
     text: "ok, let's have a look at your query"
   )
+  postback.reply(
+    text: postback.payload
+  )
   # postback.reply(
   #   attachment: {
   #     type: 'template',
