@@ -133,40 +133,40 @@ Bot.on :postback do |postback|
 
 end
 # Double boucle
-Bot.on :postback do |postback|
-  # case postback.payload
-  #   when 'Traveling'
-  #     text = 'Traveling'
-  #   when 'Calm'
-  #     text = 'Calm'
-  #   when 'Limits'
-  #     text = 'Limits'
-  #   when 'Covered'
-  #     text = 'Covered'
-  #   else
-  #     text = postback.payload
-  # end
-  postback.reply(
-    text: "ok, let's have a look at your query"
-  )
-  # postback.reply(
-  #   text: text
-  # )
-  postback.reply(
-    text: postback.payload
-  )
-  postback.reply(
-    attachment: {
-      type: 'template',
-      payload: {
-        template_type: 'button',
-        text: 'What is the topic?',
-        buttons: [
-          { type: 'postback', title: 'Beneficiary', payload: 'HARMLESS' },
-          { type: 'postback', title: 'Accident', payload: 'EXTERMINATE' }
-        ]
-      }
-    }
-  )
-end
+# Bot.on :postback do |postback|
+#   # case postback.payload
+#   #   when 'Traveling'
+#   #     text = 'Traveling'
+#   #   when 'Calm'
+#   #     text = 'Calm'
+#   #   when 'Limits'
+#   #     text = 'Limits'
+#   #   when 'Covered'
+#   #     text = 'Covered'
+#   #   else
+#   #     text = postback.payload
+#   # end
+#   postback.reply(
+#     text: "ok, let's have a look at your query"
+#   )
+#   # postback.reply(
+#   #   text: text
+#   # )
+#   postback.reply(
+#     text: postback.payload
+#   )
+#   postback.reply(
+#     attachment: {
+#       type: 'template',
+#       payload: {
+#         template_type: 'button',
+#         text: 'What is the topic?',
+#         buttons: [
+#           { type: 'postback', title: 'Beneficiary', payload: 'HARMLESS' },
+#           { type: 'postback', title: 'Accident', payload: 'EXTERMINATE' }
+#         ]
+#       }
+#     }
+#   )
+# end
 # Fin double boucle
