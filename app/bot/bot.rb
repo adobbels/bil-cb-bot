@@ -142,20 +142,20 @@ Bot.on :postback do |postback|
     # postback.reply(
     #   text: postback.payload
     # )
-    postback.reply(
-      attachment: {
-        type: 'template',
-        payload: {
-          template_type: 'button',
-          text: 'What is the topic?',
-          buttons: [
-            { type: 'postback', title: 'Beneficiary', payload: 'Here is a link for you : https://www.bil.com/en/individuals/products-and-services/managing-day-to-day-finances/Pages/credit-cards.aspx' },
-            { type: 'postback', title: 'Accident', payload: 'Here is a link for you : https://www.bil.com/en/individuals/products-and-services/managing-day-to-day-finances/Pages/credit-cards.aspx' }
-            { type: 'postback', title: 'Exclusion', payload: 'Here is a link for you : https://www.bil.com/en/individuals/products-and-services/managing-day-to-day-finances/Pages/credit-cards.aspx' }
-          ]
-        }
-      }
-    )
+    # postback.reply(
+    #   attachment: {
+    #     type: 'template',
+    #     payload: {
+    #       template_type: 'button',
+    #       text: 'What is the topic?',
+    #       buttons: [
+    #         { type: 'postback', title: 'Beneficiary', payload: 'Here is a link for you : https://www.bil.com/en/individuals/products-and-services/managing-day-to-day-finances/Pages/credit-cards.aspx' },
+    #         { type: 'postback', title: 'Accident', payload: 'Here is a link for you : https://www.bil.com/en/individuals/products-and-services/managing-day-to-day-finances/Pages/credit-cards.aspx' }
+    #         { type: 'postback', title: 'Exclusion', payload: 'Here is a link for you : https://www.bil.com/en/individuals/products-and-services/managing-day-to-day-finances/Pages/credit-cards.aspx' }
+    #       ]
+    #     }
+    #   }
+    # )
 
   end
 # Fin double boucle
