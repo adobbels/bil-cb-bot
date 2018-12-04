@@ -10,7 +10,7 @@ Bot.on :message do |message|
   message.mark_seen
   message.typing_on
 
-  puts message.reply(text: 'hi! Please choose your credit card.')
+  message.reply(text: 'hi! Please choose your credit card.')
 
   message.reply(
   attachment: {
@@ -149,22 +149,17 @@ Bot.on :postback do |postback|
           template_type: 'button',
           text: 'What is the topic?',
           buttons: [
-            { type: 'postback', title: 'Beneficiary', payload: 'Beneficiary' },
-            { type: 'postback', title: 'Accident', payload: 'Accident' }
-            { type: 'postback', title: 'Exclusion', payload: 'Exclusion' }
+            { type: 'postback', title: 'Beneficiary', payload: 'Here is a link for you : https://www.bil.com/en/individuals/products-and-services/managing-day-to-day-finances/Pages/credit-cards.aspx' },
+            { type: 'postback', title: 'Accident', payload: 'Here is a link for you : https://www.bil.com/en/individuals/products-and-services/managing-day-to-day-finances/Pages/credit-cards.aspx' }
+            { type: 'postback', title: 'Exclusion', payload: 'Here is a link for you : https://www.bil.com/en/individuals/products-and-services/managing-day-to-day-finances/Pages/credit-cards.aspx' }
           ]
         }
       }
     )
-    case postback.payload
-    when 'Beneficiary'
-    postback.reply(
-      text: 'Here is a link for you : https://www.bil.com/en/individuals/products-and-services/managing-day-to-day-finances/Pages/credit-cards.aspx"'
-    )
-    when 'Accident'
-    postback.reply(
-      text: 'Here is a link for you : https://www.bil.com/en/individuals/products-and-services/managing-day-to-day-finances/Pages/credit-cards.aspx"'
-    )
+    Bot.on :postback do |postback|
+      postback.reply(
+        text: postback.payload
+      )
     end
 
   end
