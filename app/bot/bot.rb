@@ -56,6 +56,12 @@ Bot.on :message do |message|
               }
   )
   cb = message.payload
+  postback.reply(
+    text: cb
+  )
+
+
+
 end
 
 Bot.on :postback do |postback|
@@ -129,18 +135,17 @@ Bot.on :postback do |postback|
               }
   )
 
-purpose = postback.payload
 
 Bot.on :postback do |postback|
   case postback.payload
   when 'Traveling and FX ☀️'
-    text = cb purpose
+    text = '1'
   when 'Keep calm and read this section 🧘'
-    text = cb purpose
+    text = '2'
   when 'Fully covered, wherever you go 🌍'
-    text = cb purpose
+    text = '3'
   else
-    text = cb purpose
+    text = '4'
   end
   postback.reply(
     text: text
