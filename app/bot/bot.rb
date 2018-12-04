@@ -132,9 +132,6 @@ Bot.on :postback do |postback|
 
 # Double boucle
 Bot.on :postback do |postback|
-  postback.reply(
-    text: "ok, let's have a look at your query"
-  )
   case postback.payload
   when 'Traveling'
     text = 'Traveling'
@@ -144,7 +141,15 @@ Bot.on :postback do |postback|
     text = 'Limits'
   when 'Covered'
     text = 'Covered'
+  else
+    text = postback.payload
   end
+  postback.reply(
+    text: "ok, let's have a look at your query"
+  )
+    postback.reply(
+    text: text
+  )
   # postback.reply(
   #   text: postback.payload
   # )
