@@ -174,7 +174,45 @@ include Facebook::Messenger
 
 ###################
 
-
+# Lors de la première arrivée sur le bot et menu persistent
+Facebook::Messenger::Profile.set({
+  greeting: [
+    {
+      locale: 'default',
+      text: 'Welcome to your new bot overlord!'
+    },
+    {
+      locale: 'fr_FR',
+      text: 'Bienvenue chez Tonton taxi!'
+    }
+  ],
+  get_started: {
+    payload: 'Démarrer'
+},
+  persistent_menu: [
+    {
+      locale: 'default',
+      composer_input_disabled: false,
+      call_to_actions: [
+        {
+          title: 'Comparer des VTC',
+          type: 'postback',
+          payload: 'comparer'
+        },
+        {
+          type: 'web_url',
+          title: 'A propos de Tonton',
+          url: 'https://lestontonslivreurs.com/',
+          webview_height_ratio: 'full'
+        }
+      ]
+    },
+    {
+      locale: 'zh_CN',
+      composer_input_disabled: false
+    }
+  ]
+}
 
 Bot.on :postback do |postback|
   puts "-- postback"
